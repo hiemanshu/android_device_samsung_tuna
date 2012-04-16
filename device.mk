@@ -128,7 +128,7 @@ PRODUCT_COPY_FILES += \
 
 # HACK: copy panda init for now to boot on both boards
 PRODUCT_COPY_FILES += \
-	device/ti/panda/init.omap4pandaboard.rc:root/init.omap4pandaboard.rc
+	device/samsung/tuna/panda/init.omap4pandaboard.rc:root/init.omap4pandaboard.rc
 
 # Melfas touchscreen firmware
 PRODUCT_COPY_FILES += \
