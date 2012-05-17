@@ -59,8 +59,7 @@ PRODUCT_COPY_FILES := \
 	device/samsung/tuna/init.tuna.rc:root/init.tuna.rc \
 	device/samsung/tuna/init.tuna.usb.rc:root/init.tuna.usb.rc \
 	device/samsung/tuna/ueventd.tuna.rc:root/ueventd.tuna.rc \
-	device/samsung/tuna/media_profiles.xml:system/etc/media_profiles.xml \
-	device/samsung/tuna/gps.conf:system/etc/gps.conf
+	device/samsung/tuna/media_profiles.xml:system/etc/media_profiles.xml
 
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
@@ -182,10 +181,10 @@ PRODUCT_PACKAGES += \
 	setup_fs
 
 # for bugmailer
-PRODUCT_PACKAGES += send_bug
-PRODUCT_COPY_FILES += \
-	system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
-	system/extras/bugmailer/send_bug:system/bin/send_bug
+#PRODUCT_PACKAGES += send_bug
+#PRODUCT_COPY_FILES += \
+#	system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
+#	system/extras/bugmailer/send_bug:system/bin/send_bug
 
 $(call inherit-product-if-exists, vendor/nxp/pn544/nxp-pn544-fw-vendor.mk)
 $(call inherit-product, hardware/ti/omap4xxx/omap4.mk)
