@@ -46,6 +46,3 @@ BOARD_USES_SECURE_SERVICES := true
 
 BOARD_WLAN_DEVICE_REV := bcm4330_b2
 WIFI_BAND             := 802_11_ABG
-#Linaro Target Flags
-
-TARGET_EXTRA_CFLAGS := -mtune=cortex-a9 -mcpu=cortex-a9
