@@ -46,3 +46,5 @@ BOARD_USES_SECURE_SERVICES := true
 
 BOARD_WLAN_DEVICE_REV := bcm4330_b2
 WIFI_BAND             := 802_11_ABG
+
+TARGET_PREBUILT_KERNEL := device/samsung/tuna/kernel
