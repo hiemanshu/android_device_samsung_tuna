@@ -56,8 +56,11 @@ PRODUCT_PACKAGES += \
 	audio.usb.default
 
 PRODUCT_COPY_FILES += \
-	device/samsung/tuna/audio/audio_policy.conf:system/etc/audio_policy.conf
-
+	device/samsung/tuna/audio/audio_policy.conf:system/etc/audio_policy.conf \
+        device/samsung/tuna/modules/ansi_cprng.ko:system/modules/ansi_cprng.ko \
+        device/samsung/tuna/modules/cifs.ko:system/modules/cifs.ko \
+        device/samsung/tuna/modules/md4.ko:system/modules/md4.ko \
+        device/samsung/tuna/modules/scsi_wait_scan.ko:system/modules/scsi_wait_scan.ko
 
 PRODUCT_PACKAGES += \
 	tuna_hdcp_keys
