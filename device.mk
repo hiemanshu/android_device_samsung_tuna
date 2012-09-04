@@ -19,12 +19,6 @@
 #
 # Everything in this directory will become public
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/samsung/tuna/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
 DEVICE_PACKAGE_OVERLAYS := device/samsung/tuna/overlay
 
 # This device is xhdpi.  However the platform doesn't
@@ -58,17 +52,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
 	device/samsung/tuna/audio/audio_policy.conf:system/etc/audio_policy.conf
 
+
 PRODUCT_PACKAGES += \
 	tuna_hdcp_keys
 
+#PRODUCT_PACKAGES += \
+#	keystore.tuna
+
 PRODUCT_COPY_FILES += \
-	$(LOCAL_KERNEL):kernel \
 	device/samsung/tuna/init.tuna.rc:root/init.tuna.rc \
 	device/samsung/tuna/init.tuna.usb.rc:root/init.tuna.usb.rc \
 	device/samsung/tuna/fstab.tuna:root/fstab.tuna \
 	device/samsung/tuna/ueventd.tuna.rc:root/ueventd.tuna.rc \
 	device/samsung/tuna/media_profiles.xml:system/etc/media_profiles.xml \
-	device/samsung/tuna/media_codecs.xml:system/etc/media_codecs.xml
+	device/samsung/tuna/media_codecs.xml:system/etc/media_codecs.xml \
+	device/samsung/tuna/gps.conf:system/etc/gps.conf
 
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
@@ -92,6 +90,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
+
+# Torch
+PRODUCT_PACKAGES += \
+        Torch
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -180,6 +182,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=320
 
 PRODUCT_CHARACTERISTICS := nosdcard
+
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += \
@@ -191,6 +194,14 @@ PRODUCT_PACKAGES += \
 	make_ext4fs \
 	e2fsck \
 	setup_fs
+
+# for bugmailer
+PRODUCT_PACKAGES += send_bug
+PRODUCT_COPY_FILES += \
+	system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
+	system/extras/bugmailer/send_bug:system/bin/send_bug
+
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, vendor/nxp/pn544/nxp-pn544-fw-vendor.mk)
 $(call inherit-product, hardware/ti/omap4xxx/omap4.mk)
