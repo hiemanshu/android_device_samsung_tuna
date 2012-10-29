@@ -37,7 +37,6 @@ TARGET_KERNEL_CONFIG := cyanogenmod_tuna_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/tuna
 
 TARGET_PREBUILT_KERNEL := device/samsung/tuna/kernel
-TARGET_RECOVERY_FSTAB := device/samsung/tuna/recovery.fstab
 
 TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_PLATFORM := omap4
