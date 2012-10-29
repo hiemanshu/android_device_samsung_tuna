@@ -91,10 +91,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
 
-# Packages
+# Torch
 PRODUCT_PACKAGES += \
-    Gallery \
-    GNexusParts
+        Torch
 
 # NFC
 PRODUCT_PACKAGES += \
