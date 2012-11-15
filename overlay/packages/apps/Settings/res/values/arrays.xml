@@ -63,7 +63,6 @@
     </string-array>
 
     <string-array name="available_toggles_entries">
-    	<item>@string/toggle_autorotate</item>
     	<item>@string/toggle_bluetooth</item>
     	<item>@string/toggle_gps</item>
     	<item>@string/toggle_wifi</item>
