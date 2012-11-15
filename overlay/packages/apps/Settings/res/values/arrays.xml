@@ -44,39 +44,43 @@
         <item>600000</item>
     </string-array>
 
-	<string-array name="available_toggles_entries">
-		<item>ROTATE</item>
-		<item>BT</item>
-		<item>GPS</item>
-		<item>WIFI</item>
-		<item>AIRPLANE_MODE</item>
-		<item>VIBRATE</item>
-		<item>SILENT</item>
-		<item>SYNC</item>
-		<item>DATA</item>
-		<item>LTE</item>
-		<item>AP</item>
-		<item>TETHER</item>
-		<item>TORCH</item>
-		<item>NFC</item>
-        <item>FCHARGE</item>
-	</string-array>
+    <string-array name="available_toggles_entries">
+        <item>@string/toggle_airplane</item>
+        <item>@string/toggle_bluetooth</item>
+        <item>@string/toggle_data</item>
+        <item>@string/toggle_donotdisturb</item>
+        <item>@string/toggle_fastcharge</item>
+        <item>@string/toggle_gps</item>
+        <item>@string/toggle_lte</item>
+        <item>@string/toggle_nfc</item>
+        <item>@string/toggle_rotation</item>
+        <item>@string/toggle_silent</item>
+        <item>@string/toggle_sync</item>
+        <item>@string/toggle_torch</item>
+        <item>@string/toggle_twog</item>
+        <item>@string/toggle_usbtether</item>
+        <item>@string/toggle_vibrate</item>
+        <item>@string/toggle_wifiap</item>
+        <item>@string/toggle_wifi</item>
+    </string-array>
 
-	<string-array name="available_toggles_values">
-		<item>@string/toggle_auto_rotate</item>
-		<item>@string/toggle_bluetooth</item>
-		<item>@string/toggle_gps</item>
-		<item>@string/toggle_wifi</item>
-		<item>@string/toggle_airplane_mode</item>
-		<item>@string/toggle_vibrate</item>
-		<item>@string/toggle_silent</item>
-		<item>@string/toggle_sync</item>
-		<item>@string/toggle_data</item>
-		<item>@string/toggle_lte</item>
-		<item>@string/toggle_wifi_ap</item>
-		<item>@string/toggle_usb_tether</item>
-		<item>@string/toggle_torch</item>
-		<item>@string/toggle_nfc</item>
-        <item>@string/toggle_fast_charge</item>    
-	</string-array>
+    <string-array name="available_toggles_values" translatable="false">
+        <item>AIRPLANE</item>
+        <item>BLUETOOTH</item>
+        <item>DATA</item>
+        <item>DONOTDISTURB</item>
+        <item>FASTCHARGE</item>
+        <item>GPS</item>
+        <item>LTE</item>
+        <item>NFC</item>
+        <item>ROTATION</item>
+        <item>SILENT</item>
+        <item>SYNC</item>
+        <item>TORCH</item>
+        <item>TWOG</item>
+        <item>USBTETHER</item>
+        <item>VIBRATE</item>
+        <item>WIFIAP</item>
+        <item>WIFI</item>
+    </string-array>
 </resources>
